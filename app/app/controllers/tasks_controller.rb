@@ -4,7 +4,14 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
+
+    respond_to do |format|
+      format.html
+      format.json do
+        render :json => Task.to_data_table(self)
+      end
+
+    end
   end
 
   # GET /tasks/1

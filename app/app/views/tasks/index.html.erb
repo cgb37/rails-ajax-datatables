@@ -2,8 +2,8 @@
 
 <h1>Listing Tasks</h1>
 
-<div class="table-responsive">
-  <table class="table" id="tasks-datatable">
+<div class="table-responsive dt-jqueryui">
+  <table class="table display dataTable" id="tasks-datatable" >
     <thead>
       <tr>
         <th>Name</th>
@@ -13,39 +13,10 @@
     </thead>
 
     <tbody>
-      <% @tasks.each do |task| %>
-        <tr>
-          <td><%= task.name %></td>
-          <td><%= task.content %></td>
-          <td><%= task.status %></td>
-        </tr>
-      <% end %>
+
     </tbody>
   </table>
 </div>
 <br>
 
 <%= link_to 'New Task', new_task_path %>
-
-
-<script>
-
-  $(document).ready(function () {
-
-    $('#tasks-datatable').DataTable({
-      // ajax: ...,
-      // autoWidth: false,
-      // pagingType: 'full_numbers',
-      // processing: true,
-      // serverSide: true,
-
-      // Optional, if you want full pagination controls.
-      // Check dataTables documentation to learn more about available options.
-      // http://datatables.net/reference/option/pagingType
-    });
-
-  });
-
-
-
-</script>

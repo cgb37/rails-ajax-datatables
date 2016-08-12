@@ -45,3 +45,10 @@ group :development do
   gem 'spring'
 end
 
+gem 'mongoid', '~> 5.1.0'
+
+gem 'bson_ext'
+
+gem 'bootstrap-sass', '~> 3.3.6'
+
+gem 'jquery-datatables-rails', '~> 3.3.0'
